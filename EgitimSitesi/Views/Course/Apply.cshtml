@@ -1,0 +1,55 @@
+@model Candidate
+
+<div class="display-6">
+    Başvuru
+</div>
+
+<form method="post" action="/course/apply">
+    <div class="group-form my-2">
+        <label>E-mail</label>
+        <input name="email" class="form-control" type="text">
+    </div>
+
+    <div class="group-form my-2">
+        <label>First Name</label>
+        <input name="FirstName" class="form-control" type="text">
+    </div>
+
+    <div class="group-form my-2">
+        <label>Last Name</label>
+        <input name="LastName" class="form-control" type="text">
+    </div>
+    
+    <div class="group-form my-2">
+        <label>Age</label>
+        <select name="Age" class="form-control">
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+        </select>
+    </div>
+    
+    <fieldset>
+        <p>
+            <input id="mvc" type="radio" name="SelectedCourse" value="ASP.NET Core MVC">
+            <label>ASP.NET Core MVC</label>
+        </p>
+        <p>
+            <input id="api" type="radio" name="SelectedCourse" value="ASP.NET Core API">
+            <label>ASP.NET Core API</label>
+        </p>
+        <p>
+            <input id="blazor" type="radio" name="SelectedCourse" value="Blazor">
+            <label>Blazor</label>
+        </p>
+
+    </fieldset>
+
+    <div>
+        <button class="btn btn-primary" type="submit" >Başvuru Yap</button>
+        <a class="btn btn-warning" href="/">Home</a>
+    </div>
+</form>
