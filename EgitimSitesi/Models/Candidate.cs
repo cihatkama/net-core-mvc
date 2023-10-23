@@ -1,10 +1,15 @@
 
+using System.ComponentModel.DataAnnotations;
+
 namespace EgitimSitesi.Models
 {
     public class Candidate
     {
+        [Required(ErrorMessage = "Email is required!")]
         public String? Email { get; set; } = String.Empty;
+        [Required(ErrorMessage = "FirstName is required!")]
         public String? FirstName { get; set; } = String.Empty;
+        [Required(ErrorMessage = "LastName is required!")]
         public String? LastName { get; set; } = String.Empty;
         public String? FullName => $"{FirstName} {LastName?.ToUpper()}";    // Eğer LastName null gelirse hiç birşey yapmaz. Dolu gelirse ToUpper() çağırır.
         public int? Age { get; set; }
