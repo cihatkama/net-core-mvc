@@ -22,7 +22,8 @@ namespace EgitimSitesi.Controllers
         // [ValidateAntiForgeryToken] .NET7.0 da Http 400 hatasına sebep oldu.
         public IActionResult Apply([FromForm]Candidate model) 
         {
-            return View();
+            Repository.Add(model);
+            return Redirect("/");;
         }
 
     }
